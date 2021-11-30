@@ -4,7 +4,8 @@
 // Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
 
 
-// Visualizzare con degli alert 5 numeri casuali. Da lì parte un timer di 30 secondi.
+// Visualizzare con degli alert 5 numeri casuali.
+// Da lì parte un timer di 30 secondi.
 let i = 0;
 const randomNumber = [];
 while(i < 5) {
@@ -14,10 +15,11 @@ while(i < 5) {
     i++;
     // console.log(randomNum);
 }
-console.log('Numeri generati: ' + randomNumber);
+// console.log(randomNumber);
 
 
 setTimeout(userInput, 3000);
+
 
 const userNumber = [];
 function userInput(number) {
@@ -29,8 +31,20 @@ function userInput(number) {
         userNumber.push(number);
     }
 
-    console.log('Numeri ricordati: ' + userNumber);
-    
+    return userNumber;
+}
+
+console.log(userNumber);
+
+
+const rememberedNumbers = [];
+for(let i = 0; i < userNumber.length; i++) {
+    let thisItem = userNumber[i];
+    if(randomNumber.includes(thisItem)) {
+        rememberedNumbers.push(thisItem);
+    }
+
+    return rememberedNumbers;
 }
 
 
