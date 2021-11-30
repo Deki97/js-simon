@@ -15,7 +15,7 @@ while(i < 5) {
     i++;
     // console.log(randomNum);
 }
-// console.log(randomNumber);
+console.log(randomNumber);
 
 
 setTimeout(userInput, 3000);
@@ -31,21 +31,21 @@ function userInput(number) {
         userNumber.push(number);
     }
 
-    return userNumber;
-}
-
-console.log(userNumber);
-
-
-const rememberedNumbers = [];
-for(let i = 0; i < userNumber.length; i++) {
+    const rememberedNumbers = [];
+    for(let i = 0; i < userNumber.length; i++) {
     let thisItem = userNumber[i];
     if(randomNumber.includes(thisItem)) {
         rememberedNumbers.push(thisItem);
     }
-
-    return rememberedNumbers;
 }
+
+    console.log(rememberedNumbers);
+    console.log(userNumber);
+    alert(`Hai indovinato ${rememberedNumbers.length} numeri, cioè ${rememberedNumbers}`);
+}
+
+
+
 
 
 
