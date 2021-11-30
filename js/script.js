@@ -18,7 +18,7 @@ while(i < 5) {
 console.log(randomNumber);
 
 
-setTimeout(userInput, 3000);
+setTimeout(userInput, 30000);
 
 
 const userNumber = [];
